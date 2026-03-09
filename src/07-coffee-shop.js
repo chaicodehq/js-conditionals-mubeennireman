@@ -55,7 +55,9 @@ export function calculateCoffeePrice(size, type, extras = {}) {
 
   let total = sizePrices[size] + typePrices[type];
 
-
+  if (extras.whippedCream) {
+    total += 0.5;
+  }
   if (extras.extraShot) {
     total += 0.75;
   }
